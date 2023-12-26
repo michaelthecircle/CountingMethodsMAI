@@ -56,8 +56,8 @@ def newton_method(f, df, interval, eps, maxIters):
 if __name__ == "__main__":
     with open('/Users/admin/PycharmProjects/CountingMethods/lab2/input_1.txt', 'r') as file:
         # Ввод интервала и эпсилона
-        l = int(file.readline())
-        r = int(file.readline())
+        l = float(file.readline())
+        r = float(file.readline())
         eps = float(file.readline())
         maxIters = int(file.readline())
         print('Метод итераций')
