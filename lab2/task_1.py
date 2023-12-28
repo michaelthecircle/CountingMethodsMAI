@@ -27,7 +27,7 @@ def iteration_method(f, phi, interval, eps, maxIters):
         if abs(f(x) - f(x_prev)) < eps:
             break
         x_prev = x
-    if (iters == maxIters):
+    if iters == maxIters:
         print('Достигнут максимум итераций')
     else:
         return x, iters

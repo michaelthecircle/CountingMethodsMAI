@@ -23,6 +23,7 @@ def lagrange_interpolation(x, y, test_point):
 
         polynom_str += f' + {(y[i] / cur_denom):.2f}*' + cur_enum_str
         polynom_test_value += y[i] * cur_enum_test / cur_denom
+    print("значение в точке 1.0 " + str(polynom_test_value))
     return polynom_str, abs(polynom_test_value - test_point[1])
 
 
@@ -56,6 +57,7 @@ def newton_interpolation(x, y, test_point):
 
         cur_multipliers *= (test_point[0] - x[i])
         cur_multipliers_str += f'(x-{x[i]:.2f})'
+    print("значение в точке 1.0 " + str(polynom_test_value))
     return polynom_str, abs(polynom_test_value - test_point[1])
 
 
@@ -71,26 +73,26 @@ if __name__ == '__main__':
     print('Интерполяция Лагранжа')
     print('точки A')
     lagrange_polynom_a, lagrange_error_a = lagrange_interpolation(x_a, y_a, (x_test, y_test))
-    print('многочлен')
+    print('многочлен:')
     print(lagrange_polynom_a)
     print('модуль ошибки =', lagrange_error_a)
 
     print('точки B')
     lagrange_polynom_b, lagrange_error_b = lagrange_interpolation(x_b, y_b, (x_test, y_test))
-    print('многочлен')
+    print('многочлен: ')
     print(lagrange_polynom_b)
     print('модуль ошибки =', lagrange_error_b)
     print()
 
-    print('Интерполдяция Ньютона')
+    print('Интерполяция Ньютона')
     print('точки A')
     newton_polynom_a, newton_error_a = newton_interpolation(x_a, y_a, (x_test, y_test))
-    print('многочлен')
+    print('многочлен:')
     print(newton_polynom_a)
     print('модуль ошибки =', newton_error_a)
 
     print('точки B')
     newton_polynom_b, newton_error_b = newton_interpolation(x_b, y_b, (x_test, y_test))
-    print('многочлен')
+    print('многочлен:')
     print(newton_polynom_b)
     print('модуль ошибки =', newton_error_b)

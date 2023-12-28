@@ -1,7 +1,7 @@
 def f(x):
     return x**2 / (x**3 - 27)
 
-
+####3 4 производную уточнить правую левую границу
 def integrate_rectangle_method(f, l, r, h):
     """
     вычисляет интеграл f(x)dx на интервале [l; r] с использованием метода прямоугольника с шагом = h
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     print(f'Шаг = {h1}: интеграл = {int_simpson_h1}')
     print(f'Шаг = {h2}: интеграл = {int_simpson_h2}')
 
-    print('метод рунге Робина')
-    print(f'Более точный интеграл методом прямоугольников = {runge_rombert_method(h1, h2, int_rectangle_h1, int_rectangle_h2, 3)}')
-    print(f'Более точный интеграл методом трапеций = {runge_rombert_method(h1, h2, int_trapeze_h1, int_trapeze_h2, 3)}')
-    print(f'Более точный интеграл по методу Симпсона = {runge_rombert_method(h1, h2, int_simpson_h1, int_simpson_h2, 3)}')
+    print('метод рунге Ромберга')
+    print(f'Более точный интеграл методом прямоугольников = {runge_rombert_method(h1, h2, int_rectangle_h1, int_rectangle_h2, 2)}')
+    print(f'Более точный интеграл методом трапеций = {runge_rombert_method(h1, h2, int_trapeze_h1, int_trapeze_h2, 2)}')
+    print(f'Более точный интеграл по методу Симпсона = {runge_rombert_method(h1, h2, int_simpson_h1, int_simpson_h2, 4)}')

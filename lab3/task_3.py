@@ -74,7 +74,7 @@ def sum_squared_errors(x, y, ls_coefs):
 
 if __name__ == '__main__':
     x = [-1.0, 0.0, 1.0, 2.0, 3.0, 4.0]
-    y = [-0.4597, 1.0, 1.5403, 1.5839, 2.010, 3.3464]
+    y = [-0.4597, 1.0, 1.5403, 2.01, 2.510, 3.3464]
     plt.scatter(x, y, color='r')
 
     print('МНК, degree = 1')

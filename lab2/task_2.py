@@ -92,12 +92,13 @@ def iteration_method(phi1, phi2, intervals, eps, maxIters):
     while iters != maxIters:
         iters += 1
         x = [phi1(x_prev), phi2(x_prev)]
-        if q / (1 - q) * L_inf_norm([(x[i] - x_prev[i]) for i in range(len(x))]) < eps:
+        if L_inf_norm([(x[i] - x_prev[i]) for i in range(len(x))]) < eps:
             break
         x_prev = x
     if iters == maxIters:
         print('Достигнут максимум итераций')
     else:
+        print('simple iters = ' + str(iters))
         return x, iters
 
 
@@ -124,6 +125,7 @@ def newton_method(f1, f2, df1_dx1, df1_dx2, df2_dx1, df2_dx2, intervals, eps, ma
     if iters == maxIters:
         print('Достигнут максимум итераций')
     else:
+        print('iters ' + str(iters))
         return x, iters
 
 
